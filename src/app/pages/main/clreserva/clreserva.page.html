@@ -1,0 +1,30 @@
+<app-header [showMenu]="true" title="Reserva de Hora"></app-header>
+
+
+<ion-content>
+
+  <div class="d-flex-center">
+  
+    <ion-datetime #datetime color="primary" [showDefaultTitle]="true" [isDateEnabled]="isWeekday" locale="es-ES" hourCycle="h12">
+      <span slot="title">Seleccione una fecha de reserva</span>
+      <span slot="time-label">Hora</span>
+      <ion-buttons slot="buttons">
+      </ion-buttons>
+    </ion-datetime>
+  </div>
+  
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-button color="primary" id="click-trigger">Confirmar reserva</ion-button>
+    <ion-popover trigger="click-trigger" triggerAction="click">
+      <ng-template>
+        <ion-content class="ion-padding">Reserva Confirmada</ion-content>
+      </ng-template>
+    </ion-popover>
+  </ion-fab>
+
+</ion-content>
+
+
+
+

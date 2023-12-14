@@ -15,7 +15,15 @@ const routes: Routes = [
       {
         path: 'profile',
         loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
-      }
+      },
+      {
+        path: 'clreserva',
+        loadChildren: () => import('./clreserva/clreserva.module').then( m => m.ClreservaPageModule)
+      },
+      {
+        path: 'clprins',
+        loadChildren: () => import('./clprins/clprins.module').then( m => m.ClprinsPageModule)
+      },
     ]
   },
 ];
